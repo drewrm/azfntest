@@ -3,7 +3,7 @@ module.exports = function(context, req) {
   var name = "World";
 
   if (req.query.name || (req.body && req.body.name)) {
-    name = req.body.name || req.query.name;
+    name = req.query.name || req.body.name;
   }
 
   context.res = {
